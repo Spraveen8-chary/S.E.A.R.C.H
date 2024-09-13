@@ -59,7 +59,9 @@ If you want to adjust parameters in `config.py`
 
 ## Demo
 
-https://github.com/user-attachments/assets/63543490-8d04-4cbf-be9a-acae4516bb21
+https://github.com/user-attachments/assets/2e01d28e-10c9-4d0c-9349-f8820e6b7474
+
+
 
 
 
