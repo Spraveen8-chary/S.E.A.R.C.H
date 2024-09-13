@@ -6,6 +6,8 @@ from utils import reader, load_and_parse
 from parsing_data import chunk_webpage
 from config import config
 
+config.serp_api = "cfd9c81353627486be7fbeafc152c0fe0a3e9b99c60bce0c6dc520944ccae3ca"
+config.cohere_api = "MJ1ObHVWmr231PDwdvIWvNJ7kQUOjj9fmsyEGvOk"
 
 def fetch_search_results(params, output):
     search = GoogleSearch(params)
