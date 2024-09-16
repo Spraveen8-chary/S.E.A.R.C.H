@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ## Usage
 
 - Below attached is a quickstart notebook to try it on Google Colab
-  - [![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/Spraveen8-chary/8b5be25b91a5c351c0e9e001b207e746/project.ipynb)
+  - [![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/gist/Spraveen8-chary/0f3e645ce18d4966494a7bb6052a6dd0/quick_start.ipynb)
 
 ### For local machine
 
