@@ -106,7 +106,7 @@ def get_answer(query, extra_args):
         res = sub_query(query, index, service_context)
     else:
         index_query_engine = index.as_query_engine(
-            similarity_top_k=config.retriver_top_k, node_postprocessors=[cohere_rerank, keyword_processor])
+            similarity_top_k=config.retriver_top_k, node_postprocessors= [keyword_processor]) # [cohere_rerank, keyword_processor])
         res = index_query_engine.query(query)
 
     refs = []
