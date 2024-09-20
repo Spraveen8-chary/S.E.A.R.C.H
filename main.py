@@ -65,26 +65,26 @@ def gen_code(query):
         ChatMessage(
             role=MessageRole.SYSTEM,
             content=(
-                "You are a Python programmar, you write functionally correct and good python codes"
+                "Useful for searching for specific and correct facts. "
             ),
         ),
         ChatMessage(
             role=MessageRole.USER,
             content=(
-                f"Write python code for: {query}\n"
+                f"You are a helpful assistant that generates required code. {query}\n"
             ),
         )]
     res = llm.chat(message).message.content
 
-    output = io.StringIO()
+    # output = io.StringIO()
     code_to_execute = res.split("```")[1][6:].strip()
-    with contextlib.redirect_stdout(output):
-        exec(code_to_execute)
+    # with contextlib.redirect_stdout(output):
+        # exec(code_to_execute)
 
-    captured_output = output.getvalue()
-    output.close()
+    # captured_output = output.getvalue()
+    # output.close()
 
-    return captured_output, code_to_execute
+    return code_to_execute
 
 
 def get_answer(query, extra_args):
@@ -134,8 +134,9 @@ def process(query, extra_args):
 
     if is_code:
         ans = gen_code(query)
-        op, code = ans
-        content = f"Possible output: {op}<br>Code:<br><code>{code}</code>"
+        # op, code = ans
+        code = ans
+        content = f"<br><b>Code:</b><br><pre><code>{code}</code></pre>"
         output = {
             "content": content,
             "images": [],
